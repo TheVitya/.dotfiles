@@ -1,6 +1,6 @@
 # FOLDER_NAME='nvim-linux64'
 FOLDER_NAME='nvim-macos-arm64'
-
+npm install -g @fsouza/prettierd
 curl -s -L https://github.com/neovim/neovim/releases/latest/download/$FOLDER_NAME.tar.gz | tar xvz -C .
 
 sudo rm -f /usr/bin/nvim || sudo mkdir /usr/bin/nvim

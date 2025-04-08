@@ -39,30 +39,3 @@ nnoremap("<leader>pv", ":NvimTreeToggle<CR>")
 nnoremap("<leader>r", ":Spectre<CR>")
 nnoremap("<leader>pf", ":NvimTreeFindFile<CR>")
 nnoremap("<leader>u", ":UndotreeShow<CR>")
-
-_G.organize_and_format = function(skip_write)
-    vim.lsp.buf.execute_command({
-        command = "_typescript.organizeImports",
-        arguments = { vim.api.nvim_buf_get_name(0) },
-        title = "Organize Imports"
-    })
-
-    vim.defer_fn(function()
-        vim.cmd("Prettier")
-
-        if not skip_write then
-            vim.cmd("write!")
-        end
-    end, 50) -- Add a delay (100ms) if needed
-end
-
--- Keybinding for manual format and organize imports
-nnoremap("<leader>f", "<cmd>lua organize_and_format(false)<CR>", { noremap = true, silent = true })
-
--- Autoformat on save
--- vim.api.nvim_create_autocmd("BufWritePre", {
---     pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.json", "*.css", "*.scss", "*.html", "*.md" },
---     callback = function()
---         organize_and_format(true)
---     end,
--- })

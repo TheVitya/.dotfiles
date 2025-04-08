@@ -23,8 +23,7 @@ require("nvim-tree").setup({
     git_clean = false,
     no_buffer = false,
     no_bookmark = false,
-    custom = {},
-    exclude = {},
+    custom = { "^.DS_Store$", "^.git$", "^.idea$" },
   },
   live_filter = {
     prefix = "[FILTER]: ",

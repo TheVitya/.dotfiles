@@ -78,13 +78,7 @@ packer.startup(function(use)
   use("romgrk/nvim-treesitter-context") -- Keeps the current function/class header visible at the top while scrolling
 
   -- Code Formatting
-  use { "prettier/vim-prettier" ,
-    config = function ()
-      vim.g['prettier#autoformat'] = 1
-      vim.g['prettier#autoformat_config_present'] = 1
-      vim.g['prettier#exec_cmd_path'] = 'prettier'
-    end
-  }-- Integrates Prettier for auto-formatting JavaScript, CSS, and more
+  use("mhartington/formatter.nvim")
 
   -- Commenting Utilities
   use("numToStr/Comment.nvim") -- Easily add, remove, and toggle comments in code

@@ -1,5 +1,4 @@
 local augroup = vim.api.nvim_create_augroup
-local Vitya = augroup('VityaGroup', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -17,20 +16,6 @@ autocmd('TextYankPost', {
             timeout = 40,
         })
     end,
-})
-
-autocmd({"BufEnter", "BufWinEnter", "TabEnter"}, {
-    group = Vitya,
-    pattern = "*.rs",
-    callback = function()
-        require("lsp_extensions").inlay_hints{}
-    end
-})
-
-autocmd({"BufWritePre"}, {
-    group = Vitya,
-    pattern = "*",
-    command = "%s/\\s\\+$//e",
 })
 
 

@@ -1,6 +1,7 @@
 *
 
 !.config/nvim
+.config/nvim/plugin/
 !fonts/
 !.zshrc
 !update_nvim.sh
