@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Unignore needed folders and files
+!.config/
+!.config/nvim/
+!.config/nvim/**
+!fonts/
+!update_nvim.sh
+!.zshrc
+!.gitignore
