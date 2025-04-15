@@ -22,6 +22,9 @@ map("n", "<C-w><down>", "<C-w>-", opts)
 map("n", "<C-u>", "<C-u>zz", opts)
 map("n", "<C-d>", "<C-d>zz", opts)
 
+vim.keymap.set("i", "jj", "<ESC>", { silent = true, desc = "Toggle Normal Mode" })
+vim.keymap.set("i", "kk", "<ESC>", { silent = true, desc = "Toggle Normal Mode" })
+
 vim.keymap.set("n", "<leader>pv", "<cmd>Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
 vim.keymap.set("n", "<leader>pf", "<cmd>Neotree reveal<CR>", { desc = "Open Neo-tree and reveal current file" })
 vim.keymap.set("n", "<leader>rn", function()
