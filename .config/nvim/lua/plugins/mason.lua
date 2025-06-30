@@ -9,6 +9,13 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "nix",
+
+        -- PHP
+        "intelephense",
+        "php-cs-fixer",
+        "phpstan",
+        "phpmd",
       },
     },
   },

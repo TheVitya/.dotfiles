@@ -17,6 +17,10 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "nix",
+
+        -- Drupal
+        "twig",
       },
     },
   },
