@@ -12,6 +12,14 @@ return {
             { "<leader>cR", "<cmd>TypescriptRenameFile<cr>", desc = "Rename File" },
           },
         },
+        vtsls = {
+          on_attach = function(client)
+            if client.name == "vtsls" then
+              client.server_capabilities.documentFormattingProvider = false
+              client.server_capabilities.documentRangeFormattingProvider = false
+            end
+          end,
+        },
       },
       setup = {
         tsserver = function(_, opts)
